@@ -1,0 +1,32 @@
+@use 'base' as *;
+
+nav{
+    background-color: $darkgrey;
+    border-bottom: $cyan 0.5rem solid;
+    @include flex-row(space-between);
+
+    p{
+        margin-left: 1rem;
+        color: $white;
+        font-size: $font-lg;
+    }
+
+    ul{
+        list-style-type: none;
+        @include flex-row(center);
+
+
+    }
+    li{
+        padding: 2rem;
+        &:hover{
+            background-color: $cyan;
+            color: $darkgrey;
+            transition: 0.5s ease-in;
+        }
+        a{
+            text-decoration: none;
+            color: $white;
+        }
+    }
+}

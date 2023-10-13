@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "sass": "^1.68.0"
+    "sass": "^1.69.1"
   }
 }
