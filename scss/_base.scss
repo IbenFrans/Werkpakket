@@ -1,8 +1,8 @@
 /* Colours */
 $cyan: #4BC1BD;
 $darkgrey: #636363;
-$grey: #636363;
-$white: #F4EDEA;
+$grey: #c0c0c0;
+$white: #edf2f3;
 
 /* Fontsize */
 $font-lg: 24;
@@ -28,16 +28,40 @@ $font-sm: 16;
         margin: 5px;
         padding: $navpad;
 }
+@mixin transitionAll(){
+    transition: 0.25s ease-in;
+}
 
+@mixin hover(){
+        background-color: $cyan;
+        @include transitionAll();
+        color: $white;
+        cursor: pointer;
+}
+
+@mixin pacificoFont($size...){
+    font-family: 'Pacifico', cursive;
+    font-size: $size;
+}
+
+@mixin josefinFont($size...){
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: $size;
+}
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: $darkgrey;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-weight: 500;
 }
 body{
     background-color: $white;
+    
+}
+main{
+    max-width: 1200px;
+    margin: 0 auto;
 }

@@ -1,0 +1,14 @@
+@use 'base' as *;
+
+
+
+
+#producttiles{
+    list-style-type: none;
+    @include flex-row(center);
+    flex-wrap: wrap;
+
+    li{
+        @include flex-column(center);
+    }
+}

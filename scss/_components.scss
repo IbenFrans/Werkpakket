@@ -1,1 +1,64 @@
 @use 'base' as *;
+
+.headerCenter{
+    text-align: center;
+    @include flex-column(center);
+    margin: 5rem 0;
+    cursor: default;
+    h1{
+        @include pacificoFont(100);
+        margin-bottom: 1rem
+    }
+    p{
+        @include josefinFont(20);
+    }
+}
+
+.productCard{
+    @include margin-padding(1rem);
+    text-align: center;
+    img{
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        background-color: $grey;
+    }
+
+    h3{
+        color: $white;
+        background-color: $darkgrey;
+        display: block;
+        width: 100%;
+        padding: 1rem;
+    }
+    p{
+        color: $cyan;
+        padding: 2rem;
+        display: block;
+        position: absolute;
+        opacity: 0;
+        font-weight: bolder;
+        font-size: 70;
+    }
+
+    &:hover{
+        cursor: pointer;
+
+        div{
+            overflow: hidden;
+        }
+        img{
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
+            overflow: hidden;
+            @include transitionAll();
+        }
+        h3{
+            @include hover();
+        }
+        p{
+            opacity: 100;
+            @include transitionAll();
+        }
+    }
+}

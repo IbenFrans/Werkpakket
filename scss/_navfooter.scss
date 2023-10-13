@@ -1,0 +1,48 @@
+@use 'base' as *;
+
+nav{
+    background-color: $darkgrey;
+    border-bottom: $cyan 0.5rem solid;
+    @include flex-row(space-between);
+
+    p{
+        font-family: 'Pacifico', cursive;
+        color: $white;
+        font-size: $font-lg;
+        padding: 1.2rem 2rem;
+        &:hover{
+            @include hover();
+        }
+    }
+
+    ul{
+        list-style-type: none;
+        @include flex-row(center);
+
+
+    }
+    li{
+        
+        a{
+            text-decoration: none;
+            color: $white;
+            display: inline-block;
+            padding: 2rem;
+            &:hover{
+                @include hover();
+            }
+        }
+    }
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 2rem;
+    @include flex-column(center);
+    ul{
+        @include flex-row(center);
+        list-style-type: none;
+    }
+}
