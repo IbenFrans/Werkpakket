@@ -57,6 +57,22 @@ nav{
     }
 }
 
+img {
+    height: 100px;
+    width: 100px;
+    background-color: $darkgrey;
+}
+
+#producttiles{
+    display: flex;
+    flex-direction: row;
+    background-color: red;
+    li{
+        padding: 0.5rem;
+        margin: 5px;
+    }
+}
+
 
 
 
