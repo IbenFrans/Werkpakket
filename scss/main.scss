@@ -1,7 +1,7 @@
 /* Colours */
 $cyan: #4BC1BD;
 $darkgrey: #636363;
-$grey: #636363;
+$grey: #adadad;
 $white: #F4EDEA;
 
 /* Fontsize */
@@ -58,18 +58,30 @@ nav{
 }
 
 img {
-    height: 100px;
-    width: 100px;
-    background-color: $darkgrey;
+    height:350px;
+    width: 350px;
+    background-color: $grey;
 }
 
 #producttiles{
     display: flex;
     flex-direction: row;
-    background-color: red;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    list-style-type: none;
     li{
         padding: 0.5rem;
         margin: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    h3{
+        padding: 1rem;
+        background-color: #4BC1BD;
     }
 }
 
