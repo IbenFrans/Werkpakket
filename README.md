@@ -1,3 +1,3 @@
-# Voorbeeld Sass - Scss
+# Web Expert - Werkpakket Iben Frans
 
-Dit project wordt gebruikt om de voorbeelden in de cursus uit te werken. De volledige oplossing kan je terugvinden in de `oplossing` branch.
+Een webshop voor designs van mezelf
