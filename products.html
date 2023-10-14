@@ -2,60 +2,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHOP</title>
+    <title>Products</title>
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500;600&family=Pacifico&display=swap" rel="stylesheet">
+    <script src="temp.js" defer></script>
 </head>
 <body>
     <nav>
-        <p>Shneaky Shop</p>
+        <p><a href="index.html">Shneaky Shop</a></p>
     <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a class="selected" href="products.html">Products</a></li>
         <li><a href="login.html">Login</a></li>
+        <li><a href="#">Cart (0)</a></li>
     </ul>
     </nav>
     <main>
     <header class="headerCenter">
         <h1>Products!</h1>
-        <p>Hier vind je de beste designs!</p>
+        <p>Get your shneak on with these designs!</p>
     </header>
+    <div class="filter">
+        <button class="selected">All</button>
+        <button>Digital</button>
+        <button>Painting</button>
+        <button>Graphic Art</button>
+    </div>
     <ul id="producttiles">
         <li class="productCard">
             <div> 
                 <img src="./assets/kirby.png" alt="kirby with knife"/>
             </div>
             <h3>Kirby with knife</h3>
-            <p>€50</p>
+            <div class="productCardDescription">
+                <p class="productCardPrice">€50</p>
+                <p>Cute but deadly!</p>
+            </div>
+            
         </li>
         <li class="productCard">
         <div>
-            <img src="" alt=""/>
+            <img src="./assets/coffeeslayer.png" alt="Coffee slayer"/>
         </div>
-            <h3>Product</h3>
+            <h3>Coffee Slayer</h3>
+            <div class="productCardDescription">
+                <p class="productCardPrice">€50</p>
+                <p>Defeat the morning!</p>
+            </div>
         </li>
         <li class="productCard">
             <div>
-            <img src="" alt=""/>
-        </div>
-            <h3>Product</h3>
+                <img src="./assets/mimic.png" alt="Mimic"/>
+            </div>
+            <h3>Hungry Mimic</h3>
+            <div class="productCardDescription">
+                <p class="productCardPrice">€20</p>
+                <p>Not the treasure you want!</p>
+            </div>
         </li>
         <li class="productCard">
             <div>
-            <img src="" alt=""/>
-        </div>
-            <h3>Product</h3>
+                <img src="./assets/skelecat.png" alt="Skeleton cat"/>
+            </div>
+            <h3>Skelecat</h3>
+            <div class="productCardDescription">
+                <p class="productCardPrice">€25</p>
+                <p>Spooky purssss...</p>
+            </div>
         </li>
         <li class="productCard">
-            <img src="" alt=""/>
-            <h3>Product</h3>
+            <div>
+                <img src="./assets/vissen.png" alt="Fish with pepper"/>
+            </div>
+            <h3>Spicy Fishes</h3>
+            <div class="productCardDescription">
+                <p class="productCardPrice">€100</p>
+                <p>Smells fishy</p>
+            </div>
         </li>
         <li class="productCard">
-            <img src="" alt=""/>
-            <h3>Product</h3>
+            <div>
+                <img src="./assets/shrunkenhead.png" alt="Shrunkenhead in jar"/>
+            </div>
+            <h3>Shrunkenhead</h3>
+            <div class="productCardDescription">
+                <p class="productCardPrice">€50</p>
+                <p>He looks thirsty</p>
+            </div>
+        </li>
+        
+    </ul>
+    <div class="pagination">
+        <button><</button>
+        <ul>
+            <li><button class="selected">1</button></li>
+            <li><button>2</button></li>
+            <li><button>3</button></li>
+        </ul>
+        <button>></button>
+    </div>
+</main>
+<footer>
+    <h1>Shneaky</h1>
+    <p>Check me out</p>
+    <ul>
+        <li>
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 30 30">
+                <path d="M 9.9980469 3 C 6.1390469 3 3 6.1419531 3 10.001953 L 3 20.001953 C 3 23.860953 6.1419531 27 10.001953 27 L 20.001953 27 C 23.860953 27 27 23.858047 27 19.998047 L 27 9.9980469 C 27 6.1390469 23.858047 3 19.998047 3 L 9.9980469 3 z M 22 7 C 22.552 7 23 7.448 23 8 C 23 8.552 22.552 9 22 9 C 21.448 9 21 8.552 21 8 C 21 7.448 21.448 7 22 7 z M 15 9 C 18.309 9 21 11.691 21 15 C 21 18.309 18.309 21 15 21 C 11.691 21 9 18.309 9 15 C 9 11.691 11.691 9 15 9 z M 15 11 A 4 4 0 0 0 11 15 A 4 4 0 0 0 15 19 A 4 4 0 0 0 19 15 A 4 4 0 0 0 15 11 z"></path>
+            </svg>
+            <p><a href="https://www.instagram.com/ibenfrans/" target="_blank">Instagram</a></p>
+        </li>
+        <li><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 30 30">
+            <path d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h10v-9h-3v-3h3v-1.611C16,9.339,17.486,8,20.021,8 c1.214,0,1.856,0.09,2.16,0.131V11h-1.729C19.376,11,19,11.568,19,12.718V14h3.154l-0.428,3H19v9h5c1.105,0,2-0.895,2-2V6 C26,4.895,25.104,4,24,4z"></path>
+        </svg>
+            <p><a href="https://www.facebook.com/profile.php?id=100010422605951" target="_blank">Facebook</a></p>
+        </li>
+        <li>
+            <svg id="Laag_2" data-name="Laag 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 212.77 212.32">
+                <g id="Laag_1-2" data-name="Laag 1">
+                  <path d="m107.49,22.25c2.31-2.71,19.31-21.99,47.18-21.62,20.43.27,39.42,11.01,49.8,27.52,16.08,25.57,4.56,53.93.66,63.56-6.68,16.46-17.14,27.14-23.59,32.76v45.21c-2.07,9.81-9.61,17.18-18.35,18.35-11.24,1.5-23.13-7.46-24.9-20.97-3.49,2.62-6.99,5.24-10.48,7.86v22.28c-3.43,8.57-11.36,14.46-20.31,15.07-10.05.69-19.65-5.38-23.59-15.07-.22-8.08-.44-16.16-.66-24.24-29.73-20.6-48.2-42.59-58.97-57.66C9.31,94.35-.64,79.99.03,59.6c.06-1.88,1.81-37.55,30.8-53.07C54.4-6.11,86.17-.15,107.49,22.25Z"/>
+                </g>
+              </svg>
+            <p><a href="https://ibenfrans.github.io/Portfolio/" target="_blank">Portfolio</a></p>
         </li>
     </ul>
-</main>
+</footer>
 </body>
 </html>

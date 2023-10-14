@@ -1,0 +1,35 @@
+@use 'base' as *;
+
+.carousel{
+    @include flex-row(center);
+
+    button{
+        font-size: 50px;
+    }
+}
+
+.carouselList{
+    @include flex-row(center);
+    flex-wrap: wrap;
+    li{
+        overflow: hidden;
+    }
+    img{
+        overflow: hidden;
+        height: 20rem;
+        width: 20rem;
+        object-fit: cover;
+        margin: 0 1rem;
+        &:hover{
+            @include hover();
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
+            
+        }
+        @include phoneResponsive{
+            height: 15rem;
+            width: 15rem;
+        }
+    }
+}
+    

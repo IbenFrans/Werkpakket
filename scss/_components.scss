@@ -1,13 +1,22 @@
 @use 'base' as *;
 
+.backButton{
+    font-size: $font-lg;
+    margin: 2rem 0 0 3rem;
+}
+
 .headerCenter{
     text-align: center;
     @include flex-column(center);
-    margin: 5rem 0;
+    margin: 3rem 0;
     cursor: default;
     h1{
         @include pacificoFont(100);
-        margin-bottom: 1rem
+        margin-bottom: 1rem;
+        
+        @include tabletResponsive{
+            font-size: 75;
+        }
     }
     p{
         @include josefinFont(20);
@@ -17,6 +26,7 @@
 .productCard{
     @include margin-padding(1rem);
     text-align: center;
+
     img{
         width: 300px;
         height: 300px;
@@ -31,14 +41,21 @@
         width: 100%;
         padding: 1rem;
     }
-    p{
-        color: $cyan;
-        padding: 2rem;
+    .productCardDescription{
+        padding: 3rem 2rem;
+        background-color: #42424275;
+        border-radius: 10px;
         display: block;
         position: absolute;
         opacity: 0;
         font-weight: bolder;
-        font-size: 70;
+        
+        p{
+            color: $white;
+        }
+        .productCardPrice{
+            font-size: 30px;
+        }
     }
 
     &:hover{
@@ -56,9 +73,30 @@
         h3{
             @include hover();
         }
-        p{
+        .productCardDescription{
             opacity: 100;
             @include transitionAll();
         }
     }
+}
+
+button{
+    @include margin-padding(1rem);
+    font-size: $font-md;
+    background-color: $white;
+    border: none;
+    border-radius: 10px;
+
+    &:hover{
+        @include hover();
+    }
+}
+
+.tags{
+    cursor: default;
+    background-color: $cyan;
+    display: inline-block;
+    @include margin-padding(0.5rem);
+    color: $white;
+    border-radius: 10px;
 }

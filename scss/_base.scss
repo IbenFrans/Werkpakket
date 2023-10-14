@@ -3,12 +3,13 @@ $cyan: #4BC1BD;
 $darkgrey: #636363;
 $grey: #c0c0c0;
 $white: #edf2f3;
+$green: #4fc14b;
+$darkgreen: #2d702b;
 
 /* Fontsize */
 $font-lg: 24;
 $font-md: 18;
 $font-sm: 16;
-
 
 
 @mixin flex-row($justify...){
@@ -49,6 +50,18 @@ $font-sm: 16;
     font-size: $size;
 }
 
+@mixin phoneResponsive{
+    @media only screen and (max-width: 599px){
+        @content;
+    };
+}
+
+@mixin tabletResponsive{
+    @media only screen  and (max-width: 768px){
+        @content;
+    };
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -56,12 +69,20 @@ $font-sm: 16;
     color: $darkgrey;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 500;
+    text-decoration: none;
+    list-style-type: none;
 }
 body{
     background-color: $white;
     
 }
 main{
+    margin: 50rem;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.selected{
+    @include hover();
+    transition: none;
 }

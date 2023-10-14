@@ -5,7 +5,7 @@ nav{
     border-bottom: $cyan 0.5rem solid;
     @include flex-row(space-between);
 
-    p{
+    p a{
         font-family: 'Pacifico', cursive;
         color: $white;
         font-size: $font-lg;
@@ -16,7 +16,7 @@ nav{
     }
 
     ul{
-        list-style-type: none;
+        
         @include flex-row(center);
 
 
@@ -24,7 +24,6 @@ nav{
     li{
         
         a{
-            text-decoration: none;
             color: $white;
             display: inline-block;
             padding: 2rem;
@@ -32,17 +31,58 @@ nav{
                 @include hover();
             }
         }
+        
     }
 }
 
 footer{
-    position: absolute;
-    bottom: 0;
     width: 100%;
     padding: 2rem;
     @include flex-column(center);
+
+    h1{
+        @include pacificoFont(h1);
+    }
+    
     ul{
         @include flex-row(center);
+        @include margin-padding(0.5rem);
         list-style-type: none;
+    }
+    li{
+        @include margin-padding(0.5rem);
+        margin: 5px 2rem;
+        border-radius: 10px;
+        @include flex-row(center);
+        &:hover{
+            @include hover;
+             a{
+                color: $white;
+             }
+             svg{
+                fill: $white;
+             }
+        }
+
+        svg{
+            margin-right: 0.5rem;
+            height: 20px;
+            fill: $darkgrey;
+        }
+    }
+}
+
+@include phoneResponsive{
+    nav{
+        ul{
+            @include flex-column(center);
+            li a{
+                width: 150px;
+            }
+        }
+    } 
+    
+    footer ul{
+        @include flex-column(center);
     }
 }
